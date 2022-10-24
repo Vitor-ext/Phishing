@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+body{
+    background-image: url(../imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+/* main {
+    display: flex;
+    height: 100vh;
+    justify-content: center; 
+    align-content: space-between;
+    gap: 98vh;
+    text-align: center;
+    margin-top: 0;
+
+} */
+
+
+footer{
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    align-self: flex-end;
+}

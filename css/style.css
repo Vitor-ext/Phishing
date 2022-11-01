@@ -23,10 +23,67 @@ body{
 
 } */
 
-
 footer{
     text-align: center;
     font-style: italic;
     color: rgb(255, 255, 255);
     align-self: flex-end;
+}
+
+.appmovies {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    margin: 60px 0;
+    z-index:9;
+}
+
+.app-moviestitle {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:54px;
+    max-width:70%;
+    text-align:center;
+}
+
+.app-moviessubtitle {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:25px;
+    font-weight: 300;
+    margin:20px 0 30px;
+}
+
+.form {
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+
+.forminput {
+    border: 0;
+    background-color:#fff;
+    border-radius:0;
+    padding:15px 20px;
+    width:35%;
+}
+
+.app-movies {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    margin: 60px 0;
+    z-index:9;
+}
+
+.formsubmit {
+    background-color:#e50914;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    font-size:25px;
+    padding:15px 30px;
+    transition: all .2s ease-in-out;
 }

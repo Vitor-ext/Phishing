@@ -1,8 +1,7 @@
+function handler(e) {
+    e.preventDefault();
 
-function handler(event) {
-    event.preventDefault();
-
-    let movie = document.querySelector('.forminput').value;
+    let movie = document.querySelector('.form__input').value;
 
     //console.log(movie);   // Teste Unitario
 
@@ -11,7 +10,7 @@ function handler(event) {
         const _url = `https://www.omdbapi.com/?s=${movie}&apikey=658f2b62`;     // Aplicar interpolação
         // Utilizar API com chave gerada no site.  
 
-        const _option = {
+        const _options = {
             method: 'GET',
             mode: 'cors',
             redirect: 'follow',
@@ -19,11 +18,11 @@ function handler(event) {
         }
 
 
-        fetch(_url, _option)
-            .then(function(response){
+        fetch(_url, _options)
+            .then(function(response) {
 
                 // Tratar Erros
-                if(!response.ok) throw new Erroe('Erro ao executar requisição!');
+                if(!response.ok) throw new Error('Erro ao executar requisição!');
 
                 // Retornar objeto no formato JSON
                 return response.json();
@@ -34,18 +33,18 @@ function handler(event) {
         .then(function(data) {
             //console.log(data) // teste em relação ao consumo da API
 
-            let newContent = "";
-            for(let i =1; i < data.Search.length; i++) {        // Condição para printar todos os filmes na tela
-                newContent += `<li class="app-movies-all_card">`;
-                newContent += `<figure class= "app-movies-all_figure">`;
-                newContent += `<img class= "app-movies-all_img"> scr="${data.Search[i].Poster}"`;
-                newContent += `</figure`;
-                newContent += `legend class="app-movies-all_legend>`;
-                newContent += `<span class="app-movies-all-year">${data.Search.Year}</span>`;
-                newContent += `h2 class="app-movies-all_title>${data.Search.Title}</h2>`;
-                newContent += `</legend>`;
-                newContent += `</li>`;
-            }
+                let newContent = "";
+                for(let i = 1; i < data.Search.length; i++) {           // Condição para printar todos os filmes na tela
+                    newContent += `<li class="app-movies-all__card">`;
+                    newContent += `<figure class="app-movies-all__figure">`;
+                    newContent += `<img class="app-movies-all__thumb" src="${data.Search[i].Poster}"/>`;
+                    newContent += `</figure>`;
+                    newContent += `<legend class="app-movies-all__legend">`;
+                    newContent += `<span class="app-movies-all__year">${data.Search[i].Year}</span>`;
+                    newContent += `<h2 class="app-movies-all__title">${data.Search[i].Title}</h2>`;
+                    newContent += `</legend>`;
+                    newContent += `</li>`;
+                }
 
             document.getElementById('movies').innerHTML = newContent;
 
@@ -59,6 +58,6 @@ function handler(event) {
 
 
 window.onload = () => {
-    const submit = document.querySelector('.formsubmit');
+    const submit = document.querySelector('.form__submit');
     submit.addEventListener('click', handler);
 }

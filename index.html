@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="br-pt">
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>NETFLIX</title>
-   <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetFlix Clone</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-   <main>
-      <div class="appmovies">
-         <h2 class="app-moviestitle">Filmes, séries e muito mais. Sem limites.</h2>
-         <h3 class="app-moviessubtitle">Assista onde quiser. Cancele quando quiser.</h3>
-         <form class="form" method="GET">
-            <input type="text" placeholder="Buscar filme" name="movie" class="forminput" >
-            <input type="submit" class="formsubmit" value="Vamos lá">
-         </form>
-      </div> 
-   </main>
-
-   <ul class="app-movies-all" id="movies"></ul>
+    <main>
+        <header class="header-movies">
+            <div class="container">
+                <h1 class="header-movies__title">SENAI - FRONT END</h1>
+            </div>
+        </header>
+        <section class="section-movies">
+            <div class="container">
+                <div class="app-movies">
+                    <h2 class="app-movies__title">Filmes, séries e muito mais. Sem limites.</h2>
+                    <h3 class="app-movies__subtitle">Adicione canais que você ama na sua assinatura!</h3>
+                    <form class="form" method="GET">
+                        <input type="text" placeholder="Buscar filme" name="movie" class="form__input" >
+                        <input type="submit" class="form__submit" value="Vamos lá">
+                    </form>
+                </div>
+                <ul class="app-movies-all" id="movies"></ul>
+            </div>
+        </section>
+    </main>
 
    <script src="./js/netflix.js"></script>
 
-   <footer>
-      Copyright 2022 © | ❤🚀❤ Vitor de Jesus ❤🚀❤
-   </footer>
 </body>
 </html>

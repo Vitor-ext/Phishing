@@ -1,0 +1,152 @@
+body {
+    background-color: #000;
+}
+
+main {
+    background-image:url('../src/imgs/bg.png');
+    background-repeat:repeat;
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+main:after{
+    background-color:rgba(0, 0, 0, 0.68);
+    content:'';
+    height:100%;
+    position:relative;
+    top:0;
+    width:100%;
+}
+
+h2{
+    color: azure;
+}
+.form {
+    align-items:center;
+    text-align: center;
+    width: 50%;
+    height: 400px;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    z-index:9;
+    opacity: 100%;
+}
+
+.form-input {
+    border: 3px #000 ;
+    border-radius:0;
+    padding: 25px;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 25px;
+    opacity: 100%;
+}
+
+.form-submit{
+    border-radius:0;
+    padding: 25px;
+    width: 100%;
+    height: 15%;
+    background-color:#e50914;
+    border:0;
+    cursor:pointer;
+    color:#fff;
+    font-size:15px;
+    padding:15px 30px;
+    transition: all .2s ease-in-out;
+}
+
+.suporte{
+    color: #fff;
+    padding: 30px;
+}
+
+.link{
+    margin-left: 30px;
+}
+
+.header-movies {
+    float:left;
+    position: relative;
+    padding: 15px 0;
+    width:100%;
+    z-index: 9;
+}
+.header-movies__title {
+    color:red;
+    font-family:'arial',sans-serif;
+    font-size:40px;
+    text-shadow:2px 2px #000000;
+    text-align: left;
+}
+
+.button{
+    color:rgb(255, 255, 255);
+    background-color: #e50914;
+    width: 70px;
+    height: 40px;
+    font-family:'arial';
+    font-size: 20px;
+    text-align: center;
+    margin-left: 80%;
+    padding: 5px;
+}
+
+.container-login {
+    width: 30%;
+    height: 400px;
+    display: flex;
+    margin-left: 33%;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    position:relative;
+    z-index:8;
+    background-color: #000;
+    opacity: 80%;
+}
+.container {
+    float: center;
+    
+}
+
+.app-movies {
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    margin: 60px 0;
+    z-index:9;
+}
+.app-movies__title {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:54px;
+    max-width:70%;
+    text-align:center;
+}
+.app-movies__subtitle {
+    color:white;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:25px;
+    font-weight: 300;
+    margin:20px 0 30px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    main {
+        background-image:url('../src/imgs/bgCell.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position:center;
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+
+}
